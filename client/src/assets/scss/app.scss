@@ -1,0 +1,13 @@
+// --------------- ~ MOnstER ~ ------------
+// we use global for the global styles like <section>
+@use "helpers/global";
+// ---------------------------------------
+// import bootstrap styles
+@import "~bootstrap/scss/bootstrap";
+// ---------------------------------------
+// import 404 style page
+@import "./styles/404_page";
+// ---------------------------------------
+// import scrollbar styles
+@import "./styles/scrollbar";
+// ---------------------------------------
