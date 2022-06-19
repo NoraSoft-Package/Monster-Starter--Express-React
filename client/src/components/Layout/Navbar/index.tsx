@@ -1,18 +1,39 @@
 import React from "react";
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import ReactDOM from "react-dom";
+import { NavLink } from "react-router-dom";
 import cl from "./index.module.scss";
 
 const NavMenuDeskTop: React.FC = () => {
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar bg="dark" className={cl.nav} expand="lg">
       <Container>
-        <Navbar.Brand href="#home">Monster</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        {/* Brand section */}
+        <NavLink className="navbar-brand" to="/">
+          Monster
+        </NavLink>
+        {/* Brand section */}
+
+        {/* Toggler section */}
+        <Navbar.Toggle
+          className={cl.toggler}
+          aria-controls="basic-navbar-nav"
+        />
+        {/* Toggler section */}
+
+        {/* Collapse section */}
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#link">Link</Nav.Link>
+            {/* Links section */}
+            <NavLink className="nav-link" to="/">
+              Home
+            </NavLink>
+            <NavLink className="nav-link" to="/test">
+              Not Found
+            </NavLink>
+            {/* Links section */}
+
+            {/* Dropdown section */}
             <NavDropdown title="Dropdown" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
@@ -24,8 +45,10 @@ const NavMenuDeskTop: React.FC = () => {
                 Separated link
               </NavDropdown.Item>
             </NavDropdown>
+            {/* Dropdown section */}
           </Nav>
         </Navbar.Collapse>
+        {/* Collapse section */}
       </Container>
     </Navbar>
   );
