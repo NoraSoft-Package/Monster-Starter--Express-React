@@ -3,7 +3,7 @@ const express = require("express");
 const app = express();
 
 app.get("/api/customers", (req, res) => {
-  res.send("Articles are coming...");
+  res.send("Customers are coming...");
 });
 
 const port = 5000;

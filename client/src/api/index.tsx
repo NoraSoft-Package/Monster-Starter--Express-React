@@ -5,10 +5,12 @@
  */
 
 class AppURL {
-  // your domain name
-  static Base = "http://127.0.0.1:8000";
+  // !! -------------------------- !!
+  // the domain in the package.json you can check it at the bottom of the file
+  // !! -------------------------- !!
+
   // the api name
-  static BaseURL = `${this.Base}/api`;
+  static BaseURL = `/api`;
 
   /**
    * CompileURL() v1
@@ -18,7 +20,7 @@ class AppURL {
   static CompileURL = (methodName: string) => `${AppURL.BaseURL}/${methodName}`;
 
   // the api properties
-  static TestURL = AppURL.CompileURL("test");
+  static CustomersURL = AppURL.CompileURL("customers");
 }
 
 export default AppURL;
