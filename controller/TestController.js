@@ -2,7 +2,7 @@
 const Test = require("../models/testSchema");
 
 // method that get all the tests from db | model
-const index_get = () => {
+const index_get = (req, res) => {
   // to get all the data from "Test model" | "Test table"
   Test.find()
     .then((results) => {

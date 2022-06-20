@@ -9,7 +9,7 @@ const testSchema = new Schema({
 });
 
 // Create a model based on that schema
-const Test = mongoose.model("Article", testSchema);
+const Test = mongoose.model("Test", testSchema);
 
 // export the model
 module.exports = Test;

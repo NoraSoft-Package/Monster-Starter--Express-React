@@ -45,7 +45,7 @@ const mongoose = require("mongoose");
 //   put your database name between [.net/] db name  [?]
 
 mongoose
-  .connect("your_link")
+  .connect("your_database_link")
   .then((result) => {
     app.listen(port, () => `Server running on http://localhost:${port}`);
   })
