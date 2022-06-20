@@ -15,10 +15,10 @@ npm run client-install
 ```
 
 ### Don't forget!!
-> the app have a fake controller, model, route for just explain or remember the codes.
+the app have a fake controller, model, route for just explain or remember the codes.
 
-#### First solution to run the application
-> try to delete the `route`, `model`, `controller` test files and delete this code in the server.js
+### First solution to run the application
+try to delete the `route`, `model`, `controller` test files and delete this code in the server.js
 ```js
 // delete this route code
 app.use("/api", testRouter);
@@ -27,7 +27,7 @@ const testRouter = require("./routes/test");
 ```
 
 ### Second solution to run the application
-> create your db and put your link in the server.js then it will automatically create a test table and the app will work properly!.
+create your db and put your link in the server.js then it will automatically create a test table and the app will work properly!.
 
 ### Run the client & server with concurrently
 ``` bash
