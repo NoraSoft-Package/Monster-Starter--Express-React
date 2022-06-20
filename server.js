@@ -8,6 +8,14 @@ const port = 5000;
 // body parser
 const bodyParser = require("body-parser");
 
+// cors for handling http requests
+
+var cors = require("cors");
+
+app.use(cors()); // Use this after the variable declaration
+
+// cors for handling http requests
+
 // -----------------
 // start routes
 // -----------------
@@ -37,9 +45,9 @@ const mongoose = require("mongoose");
 //   put your database name between [.net/] db name  [?]
 
 mongoose
-  .connect("your link")
+  .connect("your_link")
   .then((result) => {
-    app.listen(port, () => `Server running on port ${port}`);
+    app.listen(port, () => `Server running on http://localhost:${port}`);
   })
   .catch((err) => {
     console.log(err);
@@ -50,6 +58,3 @@ mongoose
 // test routes
 // we put the /api cause all routes have /api at the beginning
 app.use("/api", testRouter);
-
-// to run the server
-app.listen(port, () => `Server running on port ${port}`);

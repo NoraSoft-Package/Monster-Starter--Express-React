@@ -1,14 +1,14 @@
 // all requires
 const express = require("express");
 const router = express.Router();
+// the controller
+const TestController = require("../controller/TestController");
 
 // ----------------
 // start test section
 // ----------------
 
-router.get("/customers", (req, res) => {
-  res.send("Customers are coming...");
-});
+router.get("/test", TestController.index_get);
 
 // ----------------
 // end test section

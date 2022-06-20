@@ -5,12 +5,10 @@
  */
 
 class AppURL {
-  // !! -------------------------- !!
-  // the domain in the package.json you can check it at the bottom of the file
-  // !! -------------------------- !!
-
+  // your domain name
+  static Base = "http://localhost:5000";
   // the api name
-  static BaseURL = `/api`;
+  static BaseURL = `${this.Base}/api`;
 
   /**
    * CompileURL() v1
