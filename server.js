@@ -38,13 +38,13 @@ app.use(bodyParser.json());
 
 // mongos connection
 
+// require mongoose
 const mongoose = require("mongoose");
 
-// in your db link
-//   delete <password> and replace it by the database password
-//   put your database name between [.net/] db name  [?]
-
 mongoose
+  // in your link:
+  //  delete <password> and replace it by the database password
+  //  put your database name between [.net/] db name  [?]
   .connect("your_database_link")
   .then((result) => {
     app.listen(port, () => `Server running on http://localhost:${port}`);
