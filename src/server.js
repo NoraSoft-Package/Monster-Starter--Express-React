@@ -1,21 +1,30 @@
+/**
+ * the app file is the main app that contains a:
+ * routes
+ * middleware
+ * express require
+ * the whole app will be there because this is the app file like in the React App file
+ */
 const app = require("./app");
+
+// required http to create a new server
 const http = require("http");
 
 // server port
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
 // mongos connection
 
-// require mongoose
+// require mongoose database
 const mongoose = require("mongoose");
 
 mongoose
-  // in your link:
-  //  delete <password> and replace it by the database password
-  //  put your database name between [.net/] db name  [?]
-  .connect(
-    "mongodb+srv://monster:Lo5066300@cluster0.tusb9.mongodb.net/nasa_app?retryWrites=true&w=majority"
-  )
+  /**
+   * in your link:
+   *  delete <password> and replace it by the database password
+   *  put your database name between [.net/] db name  [?]
+   */
+  .connect("put_your_link")
   .then((result) => {
     // we use create server function from http
     // because this method is better for sockets and real time messages and so on
