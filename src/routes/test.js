@@ -8,7 +8,7 @@ const TestController = require("../controller/TestController");
 // start test section
 // ----------------
 
-router.get("/test", TestController.index_get);
+router.get("/", TestController.index_get);
 
 // ----------------
 // end test section
