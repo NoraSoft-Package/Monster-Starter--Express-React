@@ -1,7 +1,7 @@
 const express = require("express");
 
 // routes
-const testRouter = require("./routes/test");
+const testRouter = require("./routes/test/test.router");
 
 // the app
 const app = express();
@@ -9,7 +9,10 @@ const app = express();
 // parse to json
 app.use(express.json());
 
-// cors for handling http requests
+/**
+ * cors for handling CORS ERROR
+ * CORS is a node.js package for providing a Connect/Express middleware that can be used to enable CORS with various options.
+ */
 
 var cors = require("cors");
 

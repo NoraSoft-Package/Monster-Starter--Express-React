@@ -1,5 +1,5 @@
 // the Test model represents the test table
-const Test = require("../models/testSchema");
+const Test = require("../../models/test.model");
 
 // method that get all the tests from db | model
 const index_get = (req, res) => {

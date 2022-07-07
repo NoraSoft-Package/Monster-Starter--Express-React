@@ -13,7 +13,9 @@ mongoose
   // in your link:
   //  delete <password> and replace it by the database password
   //  put your database name between [.net/] db name  [?]
-  .connect("put_your_link")
+  .connect(
+    "mongodb+srv://monster:Lo5066300@cluster0.tusb9.mongodb.net/nasa_app?retryWrites=true&w=majority"
+  )
   .then((result) => {
     // we use create server function from http
     // because this method is better for sockets and real time messages and so on
