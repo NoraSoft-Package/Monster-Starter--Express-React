@@ -64,13 +64,10 @@ mongoose
 
 Mohamed Monster
 
-[About Me](https://about-monster.web.app/)
-
-[My Portfolio](https://z-monster.notion.site/Monster-Portfolio-dd12852c73ec477a9ba740de03a9acd5)
+[My Portfolio](https://mohamed--monster.web.app/)
 
 [My GitHub](https://github.com/Monster-Mohamed)
 
 ### Version
 
-2.3
-
+2.4.0
