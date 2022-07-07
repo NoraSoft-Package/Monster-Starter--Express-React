@@ -1,6 +1,10 @@
 /node_modules
 package-lock.json 
 
+# for the express ignores
+/server/node_modules
+/server/package-lock.json
+
 # for the react ignores
 # dependencies
 /client/node_modules

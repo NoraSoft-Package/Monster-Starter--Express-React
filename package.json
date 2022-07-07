@@ -1,26 +1,20 @@
 {
-  "name": "reactexpress",
-  "version": "1.0.0",
+  "name": "monster_starter__express_react",
+  "version": "3.0.0",
   "description": "Starter kit for creating React and Express apps",
-  "main": "server.js",
+  "main": "server/src/server.js",
   "scripts": {
+    "update": "cd server && npm update && cd ../client && npm update",
+    "i": "npm install && cd server && npm install && cd ../client && npm install",
     "client-install": "cd client && npm install",
-    "start": "node src/server.js",
-    "server": "nodemon src/server.js",
+    "start": "cd server && node src/server.js",
+    "server": "cd server && npm run watch",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
-  "author": "Brad Traversy",
-  "license": "MIT",
-  "devDependencies": {
-    "nodemon": "^1.14.6"
-  },
+  "author": "Mohamed Monster",
+  "license": "MMS",
   "dependencies": {
-    "bootstrap": "^5.1.3",
-    "concurrently": "^3.5.1",
-    "cors": "^2.8.5",
-    "express": "^4.16.2",
-    "mongoose": "^6.4.0",
-    "react-bootstrap": "^2.4.0"
+    "concurrently": "^7.2.2"
   }
 }

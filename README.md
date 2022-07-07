@@ -4,12 +4,17 @@
 
 ## Quick Start
 
-### Install dependencies for server
+### Install dependencies for all [ **Required** ]
 ``` bash
-npm install
+npm run i
 ```
 
-### Install dependencies for client
+### Update dependencies for all [ **Optional** ]
+``` bash
+npm run update
+```
+
+### Install dependencies for just client [ **Optional** ]
 ``` bash
 npm run client-install
 ```
@@ -70,4 +75,4 @@ Mohamed Monster
 
 ### Version
 
-2.4.0
+3.0.0
