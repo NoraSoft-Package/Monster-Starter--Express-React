@@ -1,4 +1,5 @@
 const express = require("express");
+const path = require("path");
 
 // routes
 const testRouter = require("./routes/test/test.router");
@@ -13,18 +14,35 @@ const app = express();
 
 var cors = require("cors");
 
-app.use(cors({
+app.use(
+  cors({
     // the domain is allowed
-    origin: "http://localhost:3000"
+    origin: "http://localhost:3000",
     // you can also add multible domains see more in the docs
-})); // Use this after the variable declaration
+  })
+); // Use this after the variable declaration
 
 // end cors for handling http requests
 
 // parse to json
 app.use(express.json());
 
+// for just a production
+// app.use(express.static(path.join(__dirname, "..", "public")));
+
 // we put the /test cause all routes have /test at the beginning
-app.use("/test", testRouter);
+app.use("/api/test", testRouter);
+
+// ------------------------- React Route --------------------------------------
+// React Route, we must put the React route at the bottom/under node's routes
+// uncomment the codes below
+/**
+app.get("/*", (req, res) => {
+  res.sendFile(path.join(__dirname, "..", "public", "index.html"));
+}); 
+**/
+// uncomment the codes top
+// React Route, we must put the React route at the bottom/under node's routes
+// ------------------------- React Route --------------------------------------
 
 module.exports = app;

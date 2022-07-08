@@ -12,12 +12,11 @@ const http = require("http");
 
 // DB settings
 /**
-   * in your link:
-   *  delete <password> and replace it by the database password
-   *  put your database name between [.net/] db name  [?]
-*/
-const db_link =
-  "put_your_link";
+ * in your link:
+ *  delete <password> and replace it by the database password
+ *  put your database name between [.net/] db name  [?]
+ */
+const db_link = "put_your_link";
 
 // server port
 const PORT = process.env.PORT || 5000;
