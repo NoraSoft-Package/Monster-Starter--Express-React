@@ -71,7 +71,7 @@ const DB_LINK = "put_your_link";
 
 * routes/api.js file is made to contains all the API routes in your application
 
-* route/client.js file tells to the server to lets the app run your public folder as a frontend to your application [learn more in production time section](#production-time)
+* route/client.js file tells to the server to lets the app run your public folder as a frontend to your application [learn more](#production-time)
 
 
 ## Production Time
