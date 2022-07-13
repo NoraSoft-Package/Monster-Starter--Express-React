@@ -3,6 +3,9 @@ const express = require("express");
 // the app
 const app = express();
 
+// for .env file
+let dotenv = require("dotenv").config();
+
 // required routes
 const api = require("./routes/api");
 // const client = require("./routes/client");
@@ -21,7 +24,7 @@ var cors = require("cors");
 app.use(
   cors({
     // the domain is allowed
-    origin: "http://localhost:3000",
+    origin: dotenv.parsed.ALLOWED_WEBSITE,
     // you can also add multible domains see more in the docs
   })
 ); // Use this after the variable declaration

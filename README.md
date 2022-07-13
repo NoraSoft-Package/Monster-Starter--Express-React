@@ -51,6 +51,8 @@ npm run client
 
 * `route/client.js` file tells to the server to lets the app run your public folder as a frontend to your application [learn more](#production-time)
 
+* `server/.env` file all the secrets of your server will be there
+
 * `client/.env` file all the secrets of your app will be there
 
 ## Don't forget!!
@@ -65,6 +67,11 @@ const DB_LINK = "put_your_link";
 in client/ rename .env.example file to .env file, then write the api path here or the backend API url in .env file
 ```js
 REACT_APP_API_URL=your_api_url
+```
+
+in server/ rename .env.example file to .env file, then write your database link in .env file
+```js
+DB_URL=your_db_link
 ```
 
 ### Second solution to run the application
@@ -83,6 +90,11 @@ const DB_LINK = "put_your_link";
 in client/ rename .env.example file to .env file, then write the api path here or the backend API url in .env file
 ```js
 REACT_APP_API_URL=your_api_url
+```
+
+in server/ rename .env.example file to .env file, then write your database link in .env file
+```js
+DB_URL=your_db_link
 ```
 
 ## Production Time

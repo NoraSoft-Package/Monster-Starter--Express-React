@@ -9,7 +9,7 @@ package-lock.json
 # dependencies
 /client/node_modules
 /client/.pnp
-/client/.env
+.env
 client/.pnp.js
 
 # testing
