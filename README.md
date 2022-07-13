@@ -62,6 +62,11 @@ create your db and put your link in the server.js then it will automatically cre
 const DB_LINK = "put_your_link";
 ```
 
+in client/ rename .env.example file to .env file, then write the api path here or the backend API url in .env file
+```js
+REACT_APP_API_URL=your_api_url
+```
+
 ### Second solution to run the application
 try to delete the `route`, `model`, `controller` test files and delete this code in the server.js
 ```js
@@ -73,12 +78,11 @@ const testRouter = require("./routes/test");
 
 // then in server.js file add your link of your database to connect to the server
 const DB_LINK = "put_your_link";
+```
 
-/* 
-  * in client/ rename .env.example file to .env file
-  * write the api path here or the backend API url in .env file
-*/
-  REACT_APP_API_URL=your_api_url
+in client/ rename .env.example file to .env file, then write the api path here or the backend API url in .env file
+```js
+REACT_APP_API_URL=your_api_url
 ```
 
 ## Production Time
