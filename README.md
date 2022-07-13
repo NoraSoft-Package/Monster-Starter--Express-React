@@ -60,16 +60,13 @@ the app have a fake `controller`, `model`, `route` for just explain or remember 
 
 ### First solution to run the application
 create your db and put your link in the server.js then it will automatically create a test table and the app will work properly!.
-```js
-const DB_LINK = "put_your_link";
-```
 
-in client/ rename .env.example file to .env file, then write the api path here or the backend API url in .env file
+* in client/ rename .env.example file to .env file, then write the api path here or the backend API url in .env file
 ```js
 REACT_APP_API_URL=your_api_url
 ```
 
-in server/ rename .env.example file to .env file, then write your database link in .env file
+* in server/ rename .env.example file to .env file, then write your database link in .env file
 ```js
 DB_URL=your_db_link
 ```
@@ -82,9 +79,6 @@ app.use("/tests", testRouter);
 
 // delete this require server/src/routes/api.js file
 const testRouter = require("./routes/test");
-
-// then in server.js file add your link of your database to connect to the server
-const DB_LINK = "put_your_link";
 ```
 
 in client/ rename .env.example file to .env file, then write the api path here or the backend API url in .env file
