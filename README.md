@@ -41,6 +41,16 @@ npm run client
 
 > Server runs on http://localhost:5000 and client on http://localhost:3000
 
+## Some Features
+
+* server file is made to run the server
+
+* app file is made to run all the codes the app need it
+
+* routes/api.js file is made to contains all the API routes in your application
+
+* route/client.js file tells to the server to lets the app run your public folder as a frontend to your application [learn more](#production-time)
+
 ## Don't forget!!
 the app have a fake controller, model, route for just explain or remember the codes.
 
@@ -62,17 +72,6 @@ const testRouter = require("./routes/test");
 // then in server.js file add your link of your database to connect to the server
 const DB_LINK = "put_your_link";
 ```
-
-## Some Features
-
-* server file is made to run the server
-
-* app file is made to run all the codes the app need it
-
-* routes/api.js file is made to contains all the API routes in your application
-
-* route/client.js file tells to the server to lets the app run your public folder as a frontend to your application [learn more](#production-time)
-
 
 ## Production Time
 * you can write in your cmd `npm run build`, then the react application will
