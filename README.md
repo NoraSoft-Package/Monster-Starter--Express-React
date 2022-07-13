@@ -65,9 +65,9 @@ const DB_LINK = "put_your_link";
 
 ## Some Features
 
-* server file is made to run all the codes to run the server
+* server file is made to run the server
 
-* app file is made to run all the codes the app needs it
+* app file is made to run all the codes the app need it
 
 * routes/api.js file is made to contains all the API routes in your application
 
