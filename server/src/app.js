@@ -1,11 +1,15 @@
 const express = require("express");
-const path = require("path");
-
-// routes
-const testRouter = require("./routes/test/test.router");
 
 // the app
 const app = express();
+
+// required routes
+const api = require("./routes/api");
+// const client = require("./routes/client");
+// required routes
+
+// for just a production
+// app.use(express.static(path.join(__dirname, "..", "public")));
 
 /**
  * cors for handling CORS ERROR
@@ -24,25 +28,18 @@ app.use(
 
 // end cors for handling http requests
 
-// parse to json
-app.use(express.json());
-
 // for just a production
 // app.use(express.static(path.join(__dirname, "..", "public")));
 
-// we put the /test cause all routes have /test at the beginning
-app.use("/api/test", testRouter);
+// Routes
+// api router
+app.use("/api", api);
 
-// ------------------------- React Route --------------------------------------
-// React Route, we must put the React route at the bottom/under node's routes
-// uncomment the codes below
-/**
-app.get("/*", (req, res) => {
-  res.sendFile(path.join(__dirname, "..", "public", "index.html"));
-}); 
-**/
-// uncomment the codes top
-// React Route, we must put the React route at the bottom/under node's routes
-// ------------------------- React Route --------------------------------------
+// the client route
+// app.use(client);
+// Routes
+
+// parse to json
+app.use(express.json());
 
 module.exports = app;

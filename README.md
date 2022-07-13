@@ -1,4 +1,4 @@
-# React Express Starter Pack
+# Monster Starter Express React v4
 
 > Create full stack apps with [React Starter](https://github.com/Monster-Library/Monster_Starter__React) and Express. Run,Install,Update your client and server with a single command. 
 
@@ -47,21 +47,31 @@ the app have a fake controller, model, route for just explain or remember the co
 ### First solution to run the application
 create your db and put your link in the server.js then it will automatically create a test table and the app will work properly!.
 ```js
-const db_link = "put_your_link";
+const DB_LINK = "put_your_link";
 ```
 
 ### Second solution to run the application
 try to delete the `route`, `model`, `controller` test files and delete this code in the server.js
 ```js
-// delete this route code
-app.use("/api", testRouter);
+// delete this route code server/src/routes/api.js file
+app.use("/tests", testRouter);
 
-// and delete this require also
+// delete this require server/src/routes/api.js file
 const testRouter = require("./routes/test");
 
 // then in server.js file add your link of your database to connect to the server
-const db_link = "put_your_link";
+const DB_LINK = "put_your_link";
 ```
+
+## Some Features
+
+* server file is made to run all the codes to run the server
+
+* app file is made to run all the codes the app needs it
+
+* routes/api.js file is made to contains all the API routes in your application
+
+* route/client.js file tells to the server to lets the app run your public folder as a frontend to your application [learn more in production time section](#production-time)
 
 
 ## Production Time
@@ -73,17 +83,23 @@ const db_link = "put_your_link";
 // uncomment this line of code
 app.use(express.static(path.join(__dirname, "..", "public")));
 ```
-also uncomment these lines of code
+
+* require path in the app.js file
 ```js
-// ------------------------- React Route --------------------------------------
-// React Route, we must put the React route at the bottom/under node's routes
-// uncomment the codes below
-app.get("/*", (req, res) => {
-  res.sendFile(path.join(__dirname, "..", "public", "index.html"));
-});
-// uncomment the codes top
-// React Route, we must put the React route at the bottom/under node's routes
-// ------------------------- React Route --------------------------------------
+const path = require("path");
+```
+
+* uncomment these requires in the app.js file
+```js
+// required routes
+const client = require("./routes/client/client.router");
+// required routes
+```
+
+* uncomment these lines of code in the app.js file
+```js
+// the client route
+app.use(client);
 ```
 
 * then run in the cmd `npm run server` to test the server before publishing the server and the react application on a one [domain, host]
@@ -103,4 +119,4 @@ Mohamed Monster
 
 ### Version
 
-v3
+v4

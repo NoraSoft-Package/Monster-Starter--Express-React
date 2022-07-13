@@ -16,7 +16,7 @@ const http = require("http");
  *  delete <password> and replace it by the database password
  *  put your database name between [.net/] db name  [?]
  */
-const db_link = "put_your_link";
+const DB_LINK = "paste_your_db_link";
 
 // server port
 const PORT = process.env.PORT || 5000;
@@ -27,7 +27,7 @@ const PORT = process.env.PORT || 5000;
 const mongoose = require("mongoose");
 
 mongoose
-  .connect(db_link)
+  .connect(DB_LINK)
   .then((result) => {
     // we use create server function from http
     // because this method is better for sockets and real time messages and so on

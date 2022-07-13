@@ -2,7 +2,7 @@
 const express = require("express");
 const router = express.Router();
 // the controller
-const TestController = require("./test.controller");
+const TestController = require("../../controller/test.controller");
 
 // ----------------
 // start test section
