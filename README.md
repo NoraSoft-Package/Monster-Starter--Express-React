@@ -43,16 +43,18 @@ npm run client
 
 ## Some Features
 
-* server file is made to run the server
+* `server.js` file is made to run the server
 
-* app file is made to run all the codes the app need it
+* `app.js` file is made to run all the codes the app need it
 
-* routes/api.js file is made to contains all the API routes in your application
+* `routes/api.js` file is made to contains all the API routes in your application
 
-* route/client.js file tells to the server to lets the app run your public folder as a frontend to your application [learn more](#production-time)
+* `route/client.js` file tells to the server to lets the app run your public folder as a frontend to your application [learn more](#production-time)
+
+* `client/.env` file all the secrets of your app will be there
 
 ## Don't forget!!
-the app have a fake controller, model, route for just explain or remember the codes.
+the app have a fake `controller`, `model`, `route` for just explain or remember the codes.
 
 ### First solution to run the application
 create your db and put your link in the server.js then it will automatically create a test table and the app will work properly!.
@@ -71,6 +73,12 @@ const testRouter = require("./routes/test");
 
 // then in server.js file add your link of your database to connect to the server
 const DB_LINK = "put_your_link";
+
+/* 
+  * in client/ rename .env.example file to .env file
+  * write the api path here or the backend API url in .env file
+*/
+  REACT_APP_API_URL=your_api_url
 ```
 
 ## Production Time

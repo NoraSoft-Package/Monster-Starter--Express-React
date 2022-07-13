@@ -8,9 +8,11 @@ const Home: React.FC = () => {
   // Test the requests api
   useEffect(() => {
     axios
-      .get(AppURL.CustomersURL)
-      .then((res) => console.log(res.data))
-      .catch((err) => console.log(err));
+      .get(AppURL.TestURL)
+      .then((res) => alert(res.data))
+      .catch((err) => {
+        throw new Error(err);
+      });
   }, []);
 
   return (

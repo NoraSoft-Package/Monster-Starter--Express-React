@@ -1,12 +1,12 @@
 /**
- * AppURL v1.0
+ * AppURL v1.1
  * this class is programmed for the api routes or links
  * you can type any api name in this class and import anywhere
  */
 
 class AppURL {
   // your domain name
-  static Base = "http://localhost:5000";
+  static Base = process.env.REACT_APP_API_URL;
   // the api name
   static BaseURL = `${this.Base}/api`;
 
@@ -18,7 +18,7 @@ class AppURL {
   static CompileURL = (methodName: string) => `${AppURL.BaseURL}/${methodName}`;
 
   // the api properties
-  static CustomersURL = AppURL.CompileURL("customers");
+  static TestURL = AppURL.CompileURL("tests");
 }
 
 export default AppURL;
