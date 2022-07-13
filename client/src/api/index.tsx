@@ -5,8 +5,9 @@
  */
 
 class AppURL {
-  // your domain name
+  // your domain name from .env file in the root of the client
   static Base = process.env.REACT_APP_API_URL;
+
   // the api name
   static BaseURL = `${this.Base}/api`;
 
