@@ -7,7 +7,7 @@ const app = express();
 let dotenv = require("dotenv").config();
 
 // required routes
-const api = require("./routes/api");
+const api = require("./routers/api");
 // const client = require("./routes/client");
 // required routes
 
@@ -25,7 +25,7 @@ app.use(
   cors({
     // the domain is allowed
     origin: dotenv.parsed.ALLOWED_WEBSITE,
-    // you can also add multible domains see more in the docs
+    // you can also add multiple domains see more in the docs
   })
 ); // Use this after the variable declaration
 
