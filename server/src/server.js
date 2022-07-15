@@ -11,7 +11,8 @@ const app = require("./app");
 const http = require("http");
 
 // for .env file
-let dotenv = require("dotenv").config();
+let dotenv = require("dotenv");
+dotenv.config();
 
 // DB settings
 /**
@@ -20,7 +21,7 @@ let dotenv = require("dotenv").config();
  *  put your database name between [.net/] db name  [?]
  * DB_URL in the .env file please put your db link there
  */
-const DB_URL = dotenv.parsed.DB_URL;
+const DB_URL = process.env.DB_URL;
 
 // server port
 const PORT = process.env.PORT || 5000;
