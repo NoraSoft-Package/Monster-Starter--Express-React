@@ -12,6 +12,23 @@ package-lock.json
 .env
 client/.pnp.js
 
+# for react native ignores
+node_modules/
+client-native/.expo/
+client-native/dist/
+client-native/npm-debug.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+client-native/web-build/
+
+# macOS
+.DS_Store
+
+
 # testing
 /client/coverage
 

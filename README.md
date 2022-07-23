@@ -1,6 +1,8 @@
-# Monster Starter Express React v5
+# Monster Starter Express React v6
 
-> Create full stack apps with [React Starter](https://github.com/Monster-Library/Monster_Starter__React) and Express. Run,Install,Update your client and server with a single command. 
+> Create full stack apps with [React Starter](https://github.com/Monster-Library/Monster_Starter__React) and Express. Run,Install,Update your client and server with a single command.
+
+> client folder refers to ReactJS and client-native refers to react-native if you will use ReactJS remove client-native folder and if you will use React Native remove client folder and rename client-native to client
 
 ## Quick Start
 
@@ -29,6 +31,11 @@ npm run build
 npm run dev
 ```
 
+### Run the client native with the web & server with concurrently
+``` bash
+npm run web
+```
+
 ### Run the Express server only
 ``` bash
 npm run server
@@ -40,6 +47,12 @@ npm run client
 ```
 
 > Server runs on http://localhost:5000 and client on http://localhost:3000
+
+> If you'll use ReactJS delete client-native and if you'll use React Native remove client folder and rename client-native to client
+
+> Use ngrok to convert the backend localhost from localhost:5000 to https to run this app on android or iPhone device
+
+> When using react native the web can't dealing with ngrok link because the cors error but the web can deal with localhost:5000 on the other hand the android or iphone devices apps can't deal with localhost:5000 because it's a `http` not `https` because that we're using ngrok to change the url of the backend to https.
 
 ## Some Features
 
@@ -91,6 +104,14 @@ in server/ rename .env.example file to .env file, then write your database link 
 DB_URL=your_db_link
 ```
 
+if you're using `React Native` not just `ReactJS` please go to the api/API_Handler.js method and put the backend urls for the phone and the web
+```js
+// the web backend url
+const webURL = "http://localhost:5000/api";
+// the phone backend url
+const phoneURL = "https://e60c-197-37-119-159.eu.ngrok.io/api";
+```
+
 ## Production Time
 * you can write in your cmd `npm run build`, then the react application will
   build for production in server/public
@@ -136,4 +157,4 @@ Mohamed Monster
 
 ### Version
 
-v5
+v6

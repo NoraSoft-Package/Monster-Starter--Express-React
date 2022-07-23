@@ -3,6 +3,9 @@ const express = require("express");
 // the app
 const app = express();
 
+// parse to json
+app.use(express.json());
+
 // required routes
 const api = require("./routers/api");
 // const client = require("./routes/client");
@@ -38,8 +41,5 @@ app.use("/api", api);
 // the client route
 // app.use(client);
 // Routes
-
-// parse to json
-app.use(express.json());
 
 module.exports = app;
