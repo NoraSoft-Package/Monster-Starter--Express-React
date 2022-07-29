@@ -1,0 +1,18 @@
+@use "../helpers/var" as *;
+// -------------- ~~ please if you don't use mixin delete it ~~ -----------------------
+
+// for handle the background image
+@mixin backgroundImg($img) {
+  background-image: $img;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+// for center the element [ absolute || fixed ] only
+@mixin center_position($position) {
+  position: $position;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

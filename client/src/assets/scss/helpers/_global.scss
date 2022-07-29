@@ -1,0 +1,20 @@
+@use "var" as *;
+
+// body styles
+body {
+  overflow-x: hidden;
+}
+
+.mern {
+  width: 100vw;
+  height: 100vh;
+}
+
+// to change the color of the links of navbar
+.nav-link {
+  color: white !important;
+}
+
+.navbar-brand {
+  color: white !important;
+}
