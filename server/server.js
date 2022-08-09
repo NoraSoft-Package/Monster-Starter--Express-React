@@ -1,12 +1,13 @@
 // required http to create a new server
-const http = require("http");
+const https = require("https");
+const fs = require("fs");
 
 // for .env file
 let dotenv = require("dotenv");
 dotenv.config();
 
 // must require the app file after requiring dotenv and configure it
-const app = require("./app");
+const app = require("./src/app");
 
 // DB settings
 /**
@@ -28,12 +29,20 @@ const mongoose = require("mongoose");
 mongoose
   .connect(DB_URL)
   .then((result) => {
-    // we use create server function from http
+    // the server options
+    // for more explain => https://www.udemy.com/course/complete-nodejs-developer-zero-to-mastery/learn/lecture/26612264#overview
+    const options = {
+      key: fs.readFileSync("key.pem"),
+      cert: fs.readFileSync("cert.pem"),
+    };
+
+    // we use create server function from https
     // because this method is better for sockets and real time messages and so on
-    const server = http.createServer(app);
+    // for more explain => https://www.udemy.com/course/complete-nodejs-developer-zero-to-mastery/learn/lecture/26612264#overview
+    const server = https.createServer(options, app);
 
     server.listen(PORT, () => {
-      console.log(`Server running on http://localhost:${PORT}`);
+      console.log(`Server running on https://localhost:${PORT}`);
     });
   })
   .catch((err) => {

@@ -9,7 +9,7 @@ const Home: React.FC = () => {
   useEffect(() => {
     axios
       .get(AppURL.TestURL)
-      .then((res) => console.log(res.data))
+      .then((res) => alert(`The connection with the api is great! ${res.data}`))
       .catch((err) => {
         throw new Error(err);
       });

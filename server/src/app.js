@@ -7,6 +7,13 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+// require helmet to handling the requests errors and make the application more secured
+// https://www.udemy.com/course/complete-nodejs-developer-zero-to-mastery/learn/lecture/26778622#overview
+const helmet = require("helmet");
+
+// use helmet before the routes to handle them
+app.use(helmet());
+
 // required routes
 const api = require("./routers/api");
 // const client = require("./routes/client");
