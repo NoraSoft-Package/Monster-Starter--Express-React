@@ -5,6 +5,7 @@ const app = express();
 
 // parse to json
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 // required routes
 const api = require("./routers/api");

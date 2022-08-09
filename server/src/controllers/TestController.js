@@ -4,7 +4,7 @@ const Test = require(`../models/Test`);
 // method that get all the tests from db | model
 const index = (req, res) => {
   // Todo: get all the tests from test table
-  res.send(`Welcome in index method`);
+  res.send(process.env.ALLOWED_WEBSITE);
 };
 
 const create = (req, res) => {

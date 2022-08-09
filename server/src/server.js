@@ -1,18 +1,12 @@
-/**
- * the app file is the main app that contains a:
- * routes
- * middleware
- * express require
- * the whole app will be there because this is the app file like in the React App file
- */
-const app = require("./app");
-
 // required http to create a new server
 const http = require("http");
 
 // for .env file
 let dotenv = require("dotenv");
 dotenv.config();
+
+// must require the app file after requiring dotenv and configure it
+const app = require("./app");
 
 // DB settings
 /**
