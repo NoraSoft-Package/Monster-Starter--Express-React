@@ -6,6 +6,6 @@ const TestRouter = require("./routes/TestRouter");
 const api = express.Router();
 
 // using these routes
-api.use("/test", TestRouter);
+api.use("/tests", TestRouter);
 
 module.exports = api;

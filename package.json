@@ -2,22 +2,23 @@
   "name": "monster_starter__express_react",
   "version": "3.0.0",
   "description": "Starter kit for creating React and Express apps",
-  "main": "server/src/server.js",
+  "main": "server/server.js",
   "scripts": {
     "update": "cd server && npm update && cd ../client && npm update",
     "i": "npm install && cd server && npm install && cd ../client && npm install",
     "client-install": "cd client && npm install",
     "build": "cd client && npm run build",
-    "start": "cd server && node src/server.js",
+    "start": "cd server && node server.js",
     "server": "cd server && npm run watch",
     "client": "npm start --prefix client",
     "client-web": "npm run web --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "web": "concurrently \"npm run server\" \"npm run client-web\""
-},
+  },
   "author": "Mohamed Monster",
   "license": "MMS",
   "dependencies": {
-    "concurrently": "^7.2.2"
+    "concurrently": "^7.2.2",
+    "helmet": "^5.1.1"
   }
 }

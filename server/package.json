@@ -2,9 +2,9 @@
   "name": "express",
   "version": "3.0.0",
   "description": "Starter for creating React and Express apps",
-  "main": "src/server.js",
+  "main": "server.js",
   "scripts": {
-    "watch": "nodemon src/server.js"
+    "watch": "nodemon server.js"
   },
   "author": "Mohamed Monster",
   "license": "MMS",
