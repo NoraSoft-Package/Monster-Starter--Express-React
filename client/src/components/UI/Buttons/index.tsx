@@ -1,6 +1,15 @@
 import React from "react";
-import cl from "./index.module.scss";
+import { Pressable } from "react-native";
+import { styles } from "./Style";
 
-export const MainContainer: React.FC = () => {
-  return <button>Test</button>;
+interface Button {
+  btnHandler: () => void;
+}
+
+export const PrimaryButton = ({ btnHandler }: Button) => {
+  return (
+    <Pressable style={styles.primary} onPress={btnHandler}>
+      Click me
+    </Pressable>
+  );
 };
