@@ -2,8 +2,6 @@
 
 > Create full stack apps with [React Starter](https://github.com/Monster-Library/Monster_Starter__React) and Express. Run,Install,Update your client and server with a single command.
 
-> client folder refers to ReactJS and client-native refers to react-native if you will use ReactJS remove client-native folder and if you will use React Native remove client folder and rename client-native to client
-
 ## Quick Start
 
 ### Install dependencies for all [ **Required** ]
@@ -47,8 +45,6 @@ npm run client
 ```
 
 > Server runs on http://localhost:5000 and client on http://localhost:3000
-
-> If you'll use ReactJS delete client-native and if you'll use React Native remove client folder and rename client-native to client
 
 > Use ngrok to convert the backend localhost from localhost:5000 to https to run this app on android or iPhone device
 
