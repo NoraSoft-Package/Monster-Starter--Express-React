@@ -1,4 +1,5 @@
 const express = require("express");
+const path = require("path");
 
 // the app
 const app = express();
@@ -16,7 +17,8 @@ app.use(helmet());
 
 // required routes
 const api = require("./routers/api");
-// const client = require("./routes/client");
+const auth = require("./routers/auth");
+// const client = require("./routers/client");
 // required routes
 
 // for just a production
@@ -45,6 +47,7 @@ app.use(
 // Routes
 // api router
 app.use("/api", api);
+app.use("/auth", auth);
 
 // the client route
 // app.use(client);

@@ -2,29 +2,29 @@
 const Test = require(`../models/Test`);
 
 // method that get all the tests from db | model
-const index = (req, res) => {
+const index = async (req, res) => {
   // Todo: get all the tests from test table
   res.send(process.env.ALLOWED_WEBSITE);
 };
 
-const create = (req, res) => {
+const create = async (req, res) => {
   // Todo: create a test
   res.send(`Welcome in create method`);
 };
 
-const getById = (req, res) => {
+const getById = async (req, res) => {
   // Todo: get just one test by it's own id
   const id = req.params.id;
   res.send(`Welcome in getById method your id is: ${id}`);
 };
 
-const update = (req, res) => {
+const update = async (req, res) => {
   // Todo: update a test
   const id = req.params.id;
   res.send(`Welcome in update method your id is: ${id}`);
 };
 
-const del = (req, res) => {
+const del = async (req, res) => {
   // Todo: delete a test
   const id = req.params.id;
   res.send(`Welcome in delete method your id is: ${id}`);

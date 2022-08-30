@@ -16,7 +16,7 @@ const app = require("./src/app");
  *  put your database name between [.net/] db name  [?]
  * DB_URL in the .env file please put your db link there
  */
-const DB_URL = process.env.DB_URL;
+const DB_URL = process.env.DATABASE_LINK;
 
 // server port
 const PORT = process.env.PORT || 5000;
