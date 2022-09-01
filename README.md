@@ -4,7 +4,7 @@
 
 ## Quick Start
 
-### Install dependencies for all [ **Required** ]
+### Install dependencies for all libraries [ **Required** ]
 ``` bash
 npm run i
 ```
